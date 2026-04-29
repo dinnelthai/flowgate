@@ -1,0 +1,110 @@
+# FlowGate 生产环境 Docker Compose 配置
+# 
+# 使用方法:
+#   1. 复制此文件到服务器
+#   2. 修改环境变量（特别是密码）
+#   3. docker compose -f docker-compose.prod.yml up -d
+#
+# ⚠️  重要：部署前必须修改所有默认密码！
+
+version: '3.4'
+
+services:
+  flowgate:
+    image: ghcr.io/dinnelthai/flowgate:latest
+    container_name: flowgate
+    restart: always
+    command: --log-dir /app/logs
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data:/data
+      - ./logs:/app/logs
+    environment:
+      # 数据库配置
+      - SQL_DSN=postgresql://flowgate:CHANGE_THIS_PASSWORD@postgres:5432/flowgate
+      
+      # Redis 配置
+      - REDIS_CONN_STRING=redis://:CHANGE_THIS_PASSWORD@redis:6379
+      
+      # 会话密钥（必须修改！使用 openssl rand -base64 32 生成）
+      - SESSION_SECRET=CHANGE_THIS_TO_RANDOM_STRING
+      
+      # 时区
+      - TZ=Asia/Shanghai
+      
+      # 性能优化
+      - BATCH_UPDATE_ENABLED=true
+      - MEMORY_CACHE_ENABLED=true
+      
+      # 安全设置（生产环境必须禁用）
+      - ENABLE_PPROF=false
+      - DEBUG=false
+      
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    networks:
+      - flowgate-network
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/api/status"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: flowgate-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: flowgate
+      POSTGRES_PASSWORD: CHANGE_THIS_PASSWORD  # ⚠️ 必须修改
+      POSTGRES_DB: flowgate
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - flowgate-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U flowgate -d flowgate"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    # 资源限制
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+
+  redis:
+    image: redis:7-alpine
+    container_name: flowgate-redis
+    restart: always
+    command: ["redis-server", "--requirepass", "CHANGE_THIS_PASSWORD", "--appendonly", "yes"]  # ⚠️ 必须修改
+    volumes:
+      - redis_data:/data
+    networks:
+      - flowgate-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "--raw", "incr", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    # 资源限制
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  flowgate-network:
+    driver: bridge
