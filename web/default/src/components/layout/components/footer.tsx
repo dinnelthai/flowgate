@@ -60,7 +60,7 @@ export function Footer(props: FooterProps) {
   } = useSystemConfig()
 
   const displayLogo = systemLogo || props.logo || '/logo.png'
-  const displayName = systemName || props.name || 'New API'
+  const displayName = systemName || props.name || 'FlowGate'
   const isDemoSiteMode = Boolean(demoSiteEnabled)
   const currentYear = new Date().getFullYear()
 
@@ -187,12 +187,12 @@ export function Footer(props: FooterProps) {
               {t('Designed and Developed by')}{' '}
             </span>
             <a
-              href='https://github.com/QuantumNous/new-api'
+              href='https://github.com/QuantumNous/flowgate'
               target='_blank'
               rel='noopener noreferrer'
               className='text-primary text-xs font-medium hover:underline'
             >
-              {t('New API')}
+              {t('FlowGate')}
             </a>
           </div>
         </div>

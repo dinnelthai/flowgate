@@ -1,8 +1,8 @@
 <div align="center">
 
-![new-api](/web/default/public/logo.png)
+![flowgate](/web/default/public/logo.png)
 
-# New API
+# FlowGate
 
 🍥 **Next-Generation Large Model Gateway and AI Asset Management System**
 
@@ -14,26 +14,26 @@
 </p>
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/Calcium-Ion/new-api/main/LICENSE">
-    <img src="https://img.shields.io/github/license/Calcium-Ion/new-api?color=brightgreen" alt="license">
+  <a href="https://raw.githubusercontent.com/Calcium-Ion/flowgate/main/LICENSE">
+    <img src="https://img.shields.io/github/license/Calcium-Ion/flowgate?color=brightgreen" alt="license">
   </a>
-  <a href="https://github.com/Calcium-Ion/new-api/releases/latest">
-    <img src="https://img.shields.io/github/v/release/Calcium-Ion/new-api?color=brightgreen&include_prereleases" alt="release">
+  <a href="https://github.com/Calcium-Ion/flowgate/releases/latest">
+    <img src="https://img.shields.io/github/v/release/Calcium-Ion/flowgate?color=brightgreen&include_prereleases" alt="release">
   </a>
-  <a href="https://github.com/users/Calcium-Ion/packages/container/package/new-api">
+  <a href="https://github.com/users/Calcium-Ion/packages/container/package/flowgate">
     <img src="https://img.shields.io/badge/docker-ghcr.io-blue" alt="docker">
   </a>
-  <a href="https://hub.docker.com/r/CalciumIon/new-api">
+  <a href="https://hub.docker.com/r/ghcr.io/dinnelthai/flowgate">
     <img src="https://img.shields.io/badge/docker-dockerHub-blue" alt="docker">
   </a>
-  <a href="https://goreportcard.com/report/github.com/Calcium-Ion/new-api">
-    <img src="https://goreportcard.com/badge/github.com/Calcium-Ion/new-api" alt="GoReportCard">
+  <a href="https://goreportcard.com/report/github.com/Calcium-Ion/flowgate">
+    <img src="https://goreportcard.com/badge/github.com/Calcium-Ion/flowgate" alt="GoReportCard">
   </a>
 </p>
 
 <p align="center">
   <a href="https://trendshift.io/repositories/8227" target="_blank">
-    <img src="https://trendshift.io/api/badge/repositories/8227" alt="Calcium-Ion%2Fnew-api | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/>
+    <img src="https://trendshift.io/api/badge/repositories/8227" alt="Calcium-Ion%2Fflowgate | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/>
   </a>
 </p>
 
@@ -88,13 +88,13 @@
 ## 🙏 Special Thanks
 
 <p align="center">
-  <a href="https://www.jetbrains.com/?from=new-api" target="_blank">
+  <a href="https://www.jetbrains.com/?from=flowgate" target="_blank">
     <img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo" width="120" />
   </a>
 </p>
 
 <p align="center">
-  <strong>Thanks to <a href="https://www.jetbrains.com/?from=new-api">JetBrains</a> for providing free open-source development license for this project</strong>
+  <strong>Thanks to <a href="https://www.jetbrains.com/?from=flowgate">JetBrains</a> for providing free open-source development license for this project</strong>
 </p>
 
 ---
@@ -105,8 +105,8 @@
 
 ```bash
 # Clone the project
-git clone https://github.com/QuantumNous/new-api.git
-cd new-api
+git clone https://github.com/QuantumNous/flowgate.git
+cd flowgate
 
 # Edit docker-compose.yml configuration
 nano docker-compose.yml
@@ -120,22 +120,22 @@ docker-compose up -d
 
 ```bash
 # Pull the latest image
-docker pull calciumion/new-api:latest
+docker pull ghcr.io/dinnelthai/flowgate:latest
 
 # Using SQLite (default)
-docker run --name new-api -d --restart always \
+docker run --name flowgate -d --restart always \
   -p 3000:3000 \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  calciumion/new-api:latest
+  ghcr.io/dinnelthai/flowgate:latest
 
 # Using MySQL
-docker run --name new-api -d --restart always \
+docker run --name flowgate -d --restart always \
   -p 3000:3000 \
   -e SQL_DSN="root:123456@tcp(localhost:3306)/oneapi" \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  calciumion/new-api:latest
+  ghcr.io/dinnelthai/flowgate:latest
 ```
 
 > **💡 Tip:** `-v ./data:/data` will save data in the `data` folder of the current directory, you can also change it to an absolute path like `-v /your/custom/path:/data`
@@ -154,7 +154,7 @@ docker run --name new-api -d --restart always \
 
 <div align="center">
 
-### 📖 [Official Documentation](https://docs.newapi.pro/en/docs) | [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/QuantumNous/new-api)
+### 📖 [Official Documentation](https://docs.newapi.pro/en/docs) | [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/QuantumNous/flowgate)
 
 </div>
 
@@ -284,7 +284,7 @@ docker run --name new-api -d --restart always \
 ## 🚢 Deployment
 
 > [!TIP]
-> **Latest Docker image:** `calciumion/new-api:latest`
+> **Latest Docker image:** `ghcr.io/dinnelthai/flowgate:latest`
 
 ### 📋 Deployment Requirements
 
@@ -311,12 +311,12 @@ docker run --name new-api -d --restart always \
 | `AZURE_DEFAULT_API_VERSION` | Azure API version | `2025-04-01-preview` |
 | `ERROR_LOG_ENABLED` | Error log switch | `false` |
 | `PYROSCOPE_URL` | Pyroscope server address | - |
-| `PYROSCOPE_APP_NAME` | Pyroscope application name | `new-api` |
+| `PYROSCOPE_APP_NAME` | Pyroscope application name | `flowgate` |
 | `PYROSCOPE_BASIC_AUTH_USER` | Pyroscope basic auth user | - |
 | `PYROSCOPE_BASIC_AUTH_PASSWORD` | Pyroscope basic auth password | - |
 | `PYROSCOPE_MUTEX_RATE` | Pyroscope mutex sampling rate | `5` |
 | `PYROSCOPE_BLOCK_RATE` | Pyroscope block sampling rate | `5` |
-| `HOSTNAME` | Hostname tag for Pyroscope | `new-api` |
+| `HOSTNAME` | Hostname tag for Pyroscope | `flowgate` |
 
 📖 **Complete configuration:** [Environment Variables Documentation](https://docs.newapi.pro/en/docs/installation/config-maintenance/environment-variables)
 
@@ -329,8 +329,8 @@ docker run --name new-api -d --restart always \
 
 ```bash
 # Clone the project
-git clone https://github.com/QuantumNous/new-api.git
-cd new-api
+git clone https://github.com/QuantumNous/flowgate.git
+cd flowgate
 
 # Edit configuration
 nano docker-compose.yml
@@ -346,21 +346,21 @@ docker-compose up -d
 
 **Using SQLite:**
 ```bash
-docker run --name new-api -d --restart always \
+docker run --name flowgate -d --restart always \
   -p 3000:3000 \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  calciumion/new-api:latest
+  ghcr.io/dinnelthai/flowgate:latest
 ```
 
 **Using MySQL:**
 ```bash
-docker run --name new-api -d --restart always \
+docker run --name flowgate -d --restart always \
   -p 3000:3000 \
   -e SQL_DSN="root:123456@tcp(localhost:3306)/oneapi" \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  calciumion/new-api:latest
+  ghcr.io/dinnelthai/flowgate:latest
 ```
 
 > **💡 Path explanation:** 
@@ -410,7 +410,7 @@ docker run --name new-api -d --restart always \
 | Project | Description |
 |------|------|
 | [neko-api-key-tool](https://github.com/Calcium-Ion/neko-api-key-tool) | Key quota query tool |
-| [new-api-horizon](https://github.com/Calcium-Ion/new-api-horizon) | New API high-performance optimized version |
+| [flowgate-horizon](https://github.com/Calcium-Ion/flowgate-horizon) | FlowGate high-performance optimized version |
 
 ---
 
@@ -440,7 +440,7 @@ Welcome all forms of contribution!
 
 <div align="center">
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Calcium-Ion/new-api&type=Date)](https://star-history.com/#Calcium-Ion/new-api&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Calcium-Ion/flowgate&type=Date)](https://star-history.com/#Calcium-Ion/flowgate&Date)
 
 </div>
 
@@ -448,11 +448,11 @@ Welcome all forms of contribution!
 
 <div align="center">
 
-### 💖 Thank you for using New API
+### 💖 Thank you for using FlowGate
 
 If this project is helpful to you, welcome to give us a ⭐️ Star！
 
-**[Official Documentation](https://docs.newapi.pro/en/docs)** • **[Issue Feedback](https://github.com/Calcium-Ion/new-api/issues)** • **[Latest Release](https://github.com/Calcium-Ion/new-api/releases)**
+**[Official Documentation](https://docs.newapi.pro/en/docs)** • **[Issue Feedback](https://github.com/Calcium-Ion/flowgate/issues)** • **[Latest Release](https://github.com/Calcium-Ion/flowgate/releases)**
 
 <sub>Built with ❤️ by QuantumNous</sub>
 

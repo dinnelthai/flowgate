@@ -1,8 +1,8 @@
 package setting
 
 import (
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
+	"github.com/QuantumNous/flowgate/common"
+	"github.com/QuantumNous/flowgate/constant"
 )
 
 var (

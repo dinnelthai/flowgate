@@ -11,19 +11,19 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/controller"
-	"github.com/QuantumNous/new-api/i18n"
-	"github.com/QuantumNous/new-api/logger"
-	"github.com/QuantumNous/new-api/middleware"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/oauth"
-	"github.com/QuantumNous/new-api/relay"
-	"github.com/QuantumNous/new-api/router"
-	"github.com/QuantumNous/new-api/service"
-	_ "github.com/QuantumNous/new-api/setting/performance_setting"
-	"github.com/QuantumNous/new-api/setting/ratio_setting"
+	"github.com/QuantumNous/flowgate/common"
+	"github.com/QuantumNous/flowgate/constant"
+	"github.com/QuantumNous/flowgate/controller"
+	"github.com/QuantumNous/flowgate/i18n"
+	"github.com/QuantumNous/flowgate/logger"
+	"github.com/QuantumNous/flowgate/middleware"
+	"github.com/QuantumNous/flowgate/model"
+	"github.com/QuantumNous/flowgate/oauth"
+	"github.com/QuantumNous/flowgate/relay"
+	"github.com/QuantumNous/flowgate/router"
+	"github.com/QuantumNous/flowgate/service"
+	_ "github.com/QuantumNous/flowgate/setting/performance_setting"
+	"github.com/QuantumNous/flowgate/setting/ratio_setting"
 
 	"github.com/bytedance/gopkg/util/gopool"
 	"github.com/gin-contrib/sessions"
@@ -55,7 +55,7 @@ func main() {
 		return
 	}
 
-	common.SysLog("New API " + common.Version + " started")
+	common.SysLog("FlowGate " + common.Version + " started")
 	if os.Getenv("GIN_MODE") != "debug" {
 		gin.SetMode(gin.ReleaseMode)
 	}
@@ -163,7 +163,7 @@ func main() {
 		common.SysLog(fmt.Sprintf("panic detected: %v", err))
 		c.JSON(http.StatusInternalServerError, gin.H{
 			"error": gin.H{
-				"message": fmt.Sprintf("Panic detected, error: %v. Please submit a issue here: https://github.com/Calcium-Ion/new-api", err),
+				"message": fmt.Sprintf("Panic detected, error: %v. Please submit a issue here: https://github.com/Calcium-Ion/flowgate", err),
 				"type":    "new_api_panic",
 			},
 		})

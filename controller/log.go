@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/model"
+	"github.com/QuantumNous/flowgate/common"
+	"github.com/QuantumNous/flowgate/model"
 
 	"github.com/gin-gonic/gin"
 )

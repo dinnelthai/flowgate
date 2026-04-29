@@ -37,7 +37,7 @@ type WorkspaceSwitcherProps = {
  */
 export function WorkspaceSwitcher({
   workspaces,
-  defaultName = 'New API',
+  defaultName = 'FlowGate',
   defaultVersion,
 }: WorkspaceSwitcherProps) {
   const { t } = useTranslation()

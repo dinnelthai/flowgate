@@ -6,11 +6,11 @@ import (
 	"reflect"
 	"testing"
 
-	common2 "github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/types"
+	common2 "github.com/QuantumNous/flowgate/common"
+	"github.com/QuantumNous/flowgate/types"
 
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/setting/model_setting"
+	"github.com/QuantumNous/flowgate/dto"
+	"github.com/QuantumNous/flowgate/setting/model_setting"
 	"github.com/samber/lo"
 )
 

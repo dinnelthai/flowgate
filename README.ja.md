@@ -1,8 +1,8 @@
 <div align="center">
 
-![new-api](/web/default/public/logo.png)
+![flowgate](/web/default/public/logo.png)
 
-# New API
+# FlowGate
 
 🍥 **次世代大規模モデルゲートウェイとAI資産管理システム**
 
@@ -15,30 +15,30 @@
 </p>
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/Calcium-Ion/new-api/main/LICENSE">
-    <img src="https://img.shields.io/github/license/Calcium-Ion/new-api?color=brightgreen" alt="license">
+  <a href="https://raw.githubusercontent.com/Calcium-Ion/flowgate/main/LICENSE">
+    <img src="https://img.shields.io/github/license/Calcium-Ion/flowgate?color=brightgreen" alt="license">
   </a><!--
-  --><a href="https://github.com/Calcium-Ion/new-api/releases/latest">
-    <img src="https://img.shields.io/github/v/release/Calcium-Ion/new-api?color=brightgreen&include_prereleases" alt="release">
+  --><a href="https://github.com/Calcium-Ion/flowgate/releases/latest">
+    <img src="https://img.shields.io/github/v/release/Calcium-Ion/flowgate?color=brightgreen&include_prereleases" alt="release">
   </a><!--
-  --><a href="https://hub.docker.com/r/CalciumIon/new-api">
+  --><a href="https://hub.docker.com/r/ghcr.io/dinnelthai/flowgate">
     <img src="https://img.shields.io/badge/docker-dockerHub-blue" alt="docker">
   </a><!--
-  --><a href="https://goreportcard.com/report/github.com/Calcium-Ion/new-api">
-    <img src="https://goreportcard.com/badge/github.com/Calcium-Ion/new-api" alt="GoReportCard">
+  --><a href="https://goreportcard.com/report/github.com/Calcium-Ion/flowgate">
+    <img src="https://goreportcard.com/badge/github.com/Calcium-Ion/flowgate" alt="GoReportCard">
   </a>
 </p>
 
 <p align="center">
   <a href="https://trendshift.io/repositories/20180" target="_blank">
-    <img src="https://trendshift.io/api/badge/repositories/20180" alt="QuantumNous%2Fnew-api | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/>
+    <img src="https://trendshift.io/api/badge/repositories/20180" alt="QuantumNous%2Fflowgate | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/>
   </a>
   <br>
-  <a href="https://hellogithub.com/repository/QuantumNous/new-api" target="_blank">
+  <a href="https://hellogithub.com/repository/QuantumNous/flowgate" target="_blank">
     <img src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=539ac4217e69431684ad4a0bab768811&claim_uid=tbFPfKIDHpc4TzR" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" />
   </a><!--
-  --><a href="https://www.producthunt.com/products/new-api/launches/new-api?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-new-api" target="_blank" rel="noopener noreferrer">
-    <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1047693&theme=light&t=1769577875005" alt="New API - All-in-one AI asset management gateway. | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" />
+  --><a href="https://www.producthunt.com/products/flowgate/launches/flowgate?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-flowgate" target="_blank" rel="noopener noreferrer">
+    <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1047693&theme=light&t=1769577875005" alt="FlowGate - All-in-one AI asset management gateway. | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" />
   </a>
 </p>
 
@@ -93,13 +93,13 @@
 ## 🙏 特別な感謝
 
 <p align="center">
-  <a href="https://www.jetbrains.com/?from=new-api" target="_blank">
+  <a href="https://www.jetbrains.com/?from=flowgate" target="_blank">
     <img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo" width="120" />
   </a>
 </p>
 
 <p align="center">
-  <strong>感謝 <a href="https://www.jetbrains.com/?from=new-api">JetBrains</a> が本プロジェクトに無料のオープンソース開発ライセンスを提供してくれたことに感謝します</strong>
+  <strong>感謝 <a href="https://www.jetbrains.com/?from=flowgate">JetBrains</a> が本プロジェクトに無料のオープンソース開発ライセンスを提供してくれたことに感謝します</strong>
 </p>
 
 ---
@@ -110,8 +110,8 @@
 
 ```bash
 # プロジェクトをクローン
-git clone https://github.com/QuantumNous/new-api.git
-cd new-api
+git clone https://github.com/QuantumNous/flowgate.git
+cd flowgate
 
 # docker-compose.yml 設定を編集
 nano docker-compose.yml
@@ -125,22 +125,22 @@ docker-compose up -d
 
 ```bash
 # 最新のイメージをプル
-docker pull calciumion/new-api:latest
+docker pull ghcr.io/dinnelthai/flowgate:latest
 
 # SQLiteを使用（デフォルト）
-docker run --name new-api -d --restart always \
+docker run --name flowgate -d --restart always \
   -p 3000:3000 \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  calciumion/new-api:latest
+  ghcr.io/dinnelthai/flowgate:latest
 
 # MySQLを使用
-docker run --name new-api -d --restart always \
+docker run --name flowgate -d --restart always \
   -p 3000:3000 \
   -e SQL_DSN="root:123456@tcp(localhost:3306)/oneapi" \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  calciumion/new-api:latest
+  ghcr.io/dinnelthai/flowgate:latest
 ```
 
 > **💡 ヒント:** `-v ./data:/data` は現在のディレクトリの `data` フォルダにデータを保存します。絶対パスに変更することもできます：`-v /your/custom/path:/data`
@@ -159,7 +159,7 @@ docker run --name new-api -d --restart always \
 
 <div align="center">
 
-### 📖 [公式ドキュメント](https://docs.newapi.pro/ja/docs) | [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/QuantumNous/new-api)
+### 📖 [公式ドキュメント](https://docs.newapi.pro/ja/docs) | [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/QuantumNous/flowgate)
 
 </div>
 
@@ -293,7 +293,7 @@ docker run --name new-api -d --restart always \
 ## 🚢 デプロイ
 
 > [!TIP]
-> **最新のDockerイメージ:** `calciumion/new-api:latest`
+> **最新のDockerイメージ:** `ghcr.io/dinnelthai/flowgate:latest`
 
 ### 📋 デプロイ要件
 
@@ -320,12 +320,12 @@ docker run --name new-api -d --restart always \
 | `AZURE_DEFAULT_API_VERSION` | Azure APIバージョン | `2025-04-01-preview` |
 | `ERROR_LOG_ENABLED` | エラーログスイッチ | `false` |
 | `PYROSCOPE_URL` | Pyroscopeサーバーのアドレス | - |
-| `PYROSCOPE_APP_NAME` | Pyroscopeアプリ名 | `new-api` |
+| `PYROSCOPE_APP_NAME` | Pyroscopeアプリ名 | `flowgate` |
 | `PYROSCOPE_BASIC_AUTH_USER` | Pyroscope Basic Authユーザー | - |
 | `PYROSCOPE_BASIC_AUTH_PASSWORD` | Pyroscope Basic Authパスワード | - |
 | `PYROSCOPE_MUTEX_RATE` | Pyroscope mutexサンプリング率 | `5` |
 | `PYROSCOPE_BLOCK_RATE` | Pyroscope blockサンプリング率 | `5` |
-| `HOSTNAME` | Pyroscope用のホスト名タグ | `new-api` |
+| `HOSTNAME` | Pyroscope用のホスト名タグ | `flowgate` |
 
 📖 **完全な設定:** [環境変数ドキュメント](https://docs.newapi.pro/ja/docs/installation/config-maintenance/environment-variables)
 
@@ -338,8 +338,8 @@ docker run --name new-api -d --restart always \
 
 ```bash
 # プロジェクトをクローン
-git clone https://github.com/QuantumNous/new-api.git
-cd new-api
+git clone https://github.com/QuantumNous/flowgate.git
+cd flowgate
 
 # 設定を編集
 nano docker-compose.yml
@@ -355,21 +355,21 @@ docker-compose up -d
 
 **SQLiteを使用:**
 ```bash
-docker run --name new-api -d --restart always \
+docker run --name flowgate -d --restart always \
   -p 3000:3000 \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  calciumion/new-api:latest
+  ghcr.io/dinnelthai/flowgate:latest
 ```
 
 **MySQLを使用:**
 ```bash
-docker run --name new-api -d --restart always \
+docker run --name flowgate -d --restart always \
   -p 3000:3000 \
   -e SQL_DSN="root:123456@tcp(localhost:3306)/oneapi" \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  calciumion/new-api:latest
+  ghcr.io/dinnelthai/flowgate:latest
 ```
 
 > **💡 パス説明:**
@@ -417,7 +417,7 @@ docker run --name new-api -d --restart always \
 | プロジェクト | 説明 |
 |------|------|
 | [neko-api-key-tool](https://github.com/Calcium-Ion/neko-api-key-tool) | キー使用量クォータ照会ツール |
-| [new-api-horizon](https://github.com/Calcium-Ion/new-api-horizon) | New API高性能最適化版 |
+| [flowgate-horizon](https://github.com/Calcium-Ion/flowgate-horizon) | FlowGate高性能最適化版 |
 
 ---
 
@@ -457,7 +457,7 @@ docker run --name new-api -d --restart always \
 
 <div align="center">
 
-[![スター履歴チャート](https://api.star-history.com/svg?repos=Calcium-Ion/new-api&type=Date)](https://star-history.com/#Calcium-Ion/new-api&Date)
+[![スター履歴チャート](https://api.star-history.com/svg?repos=Calcium-Ion/flowgate&type=Date)](https://star-history.com/#Calcium-Ion/flowgate&Date)
 
 </div>
 
@@ -465,11 +465,11 @@ docker run --name new-api -d --restart always \
 
 <div align="center">
 
-### 💖 New APIをご利用いただきありがとうございます
+### 💖 FlowGateをご利用いただきありがとうございます
 
 このプロジェクトがあなたのお役に立てたなら、ぜひ ⭐️ スターをください！
 
-**[公式ドキュメント](https://docs.newapi.pro/ja/docs)** • **[問題フィードバック](https://github.com/Calcium-Ion/new-api/issues)** • **[最新リリース](https://github.com/Calcium-Ion/new-api/releases)**
+**[公式ドキュメント](https://docs.newapi.pro/ja/docs)** • **[問題フィードバック](https://github.com/Calcium-Ion/flowgate/issues)** • **[最新リリース](https://github.com/Calcium-Ion/flowgate/releases)**
 
 <sub>❤️ で構築された QuantumNous</sub>
 

@@ -7,10 +7,10 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/model"
-	passkeysvc "github.com/QuantumNous/new-api/service/passkey"
-	"github.com/QuantumNous/new-api/setting/system_setting"
+	"github.com/QuantumNous/flowgate/common"
+	"github.com/QuantumNous/flowgate/model"
+	passkeysvc "github.com/QuantumNous/flowgate/service/passkey"
+	"github.com/QuantumNous/flowgate/setting/system_setting"
 
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"

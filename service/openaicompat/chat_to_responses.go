@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/dto"
+	"github.com/QuantumNous/flowgate/common"
+	"github.com/QuantumNous/flowgate/dto"
 	"github.com/samber/lo"
 )
 

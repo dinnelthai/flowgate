@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QuantumNous/flowgate/common"
+	"github.com/QuantumNous/flowgate/types"
 	"github.com/samber/lo"
 	"github.com/tidwall/gjson"
 	"github.com/tidwall/sjson"

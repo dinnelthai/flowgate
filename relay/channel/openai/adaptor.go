@@ -12,24 +12,24 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/logger"
-	"github.com/QuantumNous/new-api/relay/channel"
-	"github.com/QuantumNous/new-api/relay/channel/ai360"
-	"github.com/QuantumNous/new-api/relay/channel/lingyiwanwu"
+	"github.com/QuantumNous/flowgate/common"
+	"github.com/QuantumNous/flowgate/constant"
+	"github.com/QuantumNous/flowgate/dto"
+	"github.com/QuantumNous/flowgate/logger"
+	"github.com/QuantumNous/flowgate/relay/channel"
+	"github.com/QuantumNous/flowgate/relay/channel/ai360"
+	"github.com/QuantumNous/flowgate/relay/channel/lingyiwanwu"
 
-	//"github.com/QuantumNous/new-api/relay/channel/minimax"
-	"github.com/QuantumNous/new-api/relay/channel/openrouter"
-	"github.com/QuantumNous/new-api/relay/channel/xinference"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	"github.com/QuantumNous/new-api/relay/common_handler"
-	relayconstant "github.com/QuantumNous/new-api/relay/constant"
-	"github.com/QuantumNous/new-api/service"
-	"github.com/QuantumNous/new-api/setting/model_setting"
-	"github.com/QuantumNous/new-api/setting/reasoning"
-	"github.com/QuantumNous/new-api/types"
+	//"github.com/QuantumNous/flowgate/relay/channel/minimax"
+	"github.com/QuantumNous/flowgate/relay/channel/openrouter"
+	"github.com/QuantumNous/flowgate/relay/channel/xinference"
+	relaycommon "github.com/QuantumNous/flowgate/relay/common"
+	"github.com/QuantumNous/flowgate/relay/common_handler"
+	relayconstant "github.com/QuantumNous/flowgate/relay/constant"
+	"github.com/QuantumNous/flowgate/service"
+	"github.com/QuantumNous/flowgate/setting/model_setting"
+	"github.com/QuantumNous/flowgate/setting/reasoning"
+	"github.com/QuantumNous/flowgate/types"
 	"github.com/samber/lo"
 
 	"github.com/gin-gonic/gin"
@@ -220,7 +220,7 @@ func (a *Adaptor) SetupRequestHeader(c *gin.Context, header *http.Header, info *
 			header.Set("HTTP-Referer", "https://www.newapi.ai")
 		}
 		if header.Get("X-OpenRouter-Title") == "" {
-			header.Set("X-OpenRouter-Title", "New API")
+			header.Set("X-OpenRouter-Title", "FlowGate")
 		}
 	}
 	return nil

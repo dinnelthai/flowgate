@@ -12,8 +12,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/model"
+	"github.com/QuantumNous/flowgate/common"
+	"github.com/QuantumNous/flowgate/model"
 	"github.com/gin-gonic/gin"
 	"github.com/glebarez/sqlite"
 	"gorm.io/driver/mysql"

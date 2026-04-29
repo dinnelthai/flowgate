@@ -7,12 +7,12 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/relay/channel"
-	"github.com/QuantumNous/new-api/relay/channel/openai"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	"github.com/QuantumNous/new-api/relay/constant"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QuantumNous/flowgate/dto"
+	"github.com/QuantumNous/flowgate/relay/channel"
+	"github.com/QuantumNous/flowgate/relay/channel/openai"
+	relaycommon "github.com/QuantumNous/flowgate/relay/common"
+	"github.com/QuantumNous/flowgate/relay/constant"
+	"github.com/QuantumNous/flowgate/types"
 
 	"github.com/gin-gonic/gin"
 )

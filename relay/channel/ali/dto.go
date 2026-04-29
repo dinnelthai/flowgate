@@ -3,9 +3,9 @@ package ali
 import (
 	"strings"
 
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/logger"
-	"github.com/QuantumNous/new-api/service"
+	"github.com/QuantumNous/flowgate/dto"
+	"github.com/QuantumNous/flowgate/logger"
+	"github.com/QuantumNous/flowgate/service"
 	"github.com/gin-gonic/gin"
 )
 

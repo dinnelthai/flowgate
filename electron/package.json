@@ -1,7 +1,7 @@
 {
-  "name": "new-api-electron",
+  "name": "flowgate-electron",
   "version": "1.0.0",
-  "description": "New API - AI Model Gateway Desktop Application",
+  "description": "FlowGate - AI Model Gateway Desktop Application",
   "main": "main.js",
   "scripts": {
     "start-app": "electron .",
@@ -21,7 +21,7 @@
   "author": "QuantumNous",
   "repository": {
     "type": "git",
-    "url": "https://github.com/QuantumNous/new-api"
+    "url": "https://github.com/QuantumNous/flowgate"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
@@ -57,8 +57,8 @@
       ],
       "extraResources": [
         {
-          "from": "../new-api",
-          "to": "bin/new-api"
+          "from": "../flowgate",
+          "to": "bin/flowgate"
         },
         {
           "from": "../web/dist",
@@ -74,8 +74,8 @@
       ],
       "extraResources": [
         {
-          "from": "../new-api.exe",
-          "to": "bin/new-api.exe"
+          "from": "../flowgate.exe",
+          "to": "bin/flowgate.exe"
         }
       ]
     },
@@ -88,8 +88,8 @@
       "category": "Development",
       "extraResources": [
         {
-          "from": "../new-api",
-          "to": "bin/new-api"
+          "from": "../flowgate",
+          "to": "bin/flowgate"
         }
       ]
     },

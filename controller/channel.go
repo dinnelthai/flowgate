@@ -9,14 +9,14 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/model"
-	relaychannel "github.com/QuantumNous/new-api/relay/channel"
-	"github.com/QuantumNous/new-api/relay/channel/gemini"
-	"github.com/QuantumNous/new-api/relay/channel/ollama"
-	"github.com/QuantumNous/new-api/service"
+	"github.com/QuantumNous/flowgate/common"
+	"github.com/QuantumNous/flowgate/constant"
+	"github.com/QuantumNous/flowgate/dto"
+	"github.com/QuantumNous/flowgate/model"
+	relaychannel "github.com/QuantumNous/flowgate/relay/channel"
+	"github.com/QuantumNous/flowgate/relay/channel/gemini"
+	"github.com/QuantumNous/flowgate/relay/channel/ollama"
+	"github.com/QuantumNous/flowgate/service"
 
 	"github.com/gin-gonic/gin"
 )

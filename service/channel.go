@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/setting/operation_setting"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QuantumNous/flowgate/common"
+	"github.com/QuantumNous/flowgate/dto"
+	"github.com/QuantumNous/flowgate/model"
+	"github.com/QuantumNous/flowgate/setting/operation_setting"
+	"github.com/QuantumNous/flowgate/types"
 )
 
 func formatNotifyType(channelId int, status int) string {

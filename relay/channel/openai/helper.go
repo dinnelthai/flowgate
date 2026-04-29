@@ -4,14 +4,14 @@ import (
 	"encoding/json"
 	"strings"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/logger"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	relayconstant "github.com/QuantumNous/new-api/relay/constant"
-	"github.com/QuantumNous/new-api/relay/helper"
-	"github.com/QuantumNous/new-api/service"
-	"github.com/QuantumNous/new-api/types"
+	"github.com/QuantumNous/flowgate/common"
+	"github.com/QuantumNous/flowgate/dto"
+	"github.com/QuantumNous/flowgate/logger"
+	relaycommon "github.com/QuantumNous/flowgate/relay/common"
+	relayconstant "github.com/QuantumNous/flowgate/relay/constant"
+	"github.com/QuantumNous/flowgate/relay/helper"
+	"github.com/QuantumNous/flowgate/service"
+	"github.com/QuantumNous/flowgate/types"
 
 	"github.com/samber/lo"
 

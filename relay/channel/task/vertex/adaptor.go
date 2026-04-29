@@ -9,18 +9,18 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/model"
+	"github.com/QuantumNous/flowgate/common"
+	"github.com/QuantumNous/flowgate/model"
 	"github.com/gin-gonic/gin"
 
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/relay/channel"
-	geminitask "github.com/QuantumNous/new-api/relay/channel/task/gemini"
-	taskcommon "github.com/QuantumNous/new-api/relay/channel/task/taskcommon"
-	vertexcore "github.com/QuantumNous/new-api/relay/channel/vertex"
-	relaycommon "github.com/QuantumNous/new-api/relay/common"
-	"github.com/QuantumNous/new-api/service"
+	"github.com/QuantumNous/flowgate/constant"
+	"github.com/QuantumNous/flowgate/dto"
+	"github.com/QuantumNous/flowgate/relay/channel"
+	geminitask "github.com/QuantumNous/flowgate/relay/channel/task/gemini"
+	taskcommon "github.com/QuantumNous/flowgate/relay/channel/task/taskcommon"
+	vertexcore "github.com/QuantumNous/flowgate/relay/channel/vertex"
+	relaycommon "github.com/QuantumNous/flowgate/relay/common"
+	"github.com/QuantumNous/flowgate/service"
 )
 
 // ============================

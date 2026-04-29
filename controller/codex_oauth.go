@@ -10,11 +10,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/constant"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/relay/channel/codex"
-	"github.com/QuantumNous/new-api/service"
+	"github.com/QuantumNous/flowgate/common"
+	"github.com/QuantumNous/flowgate/constant"
+	"github.com/QuantumNous/flowgate/model"
+	"github.com/QuantumNous/flowgate/relay/channel/codex"
+	"github.com/QuantumNous/flowgate/service"
 
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"

@@ -17,10 +17,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/setting"
+	"github.com/QuantumNous/flowgate/common"
+	"github.com/QuantumNous/flowgate/dto"
+	"github.com/QuantumNous/flowgate/model"
+	"github.com/QuantumNous/flowgate/setting"
 )
 
 const (

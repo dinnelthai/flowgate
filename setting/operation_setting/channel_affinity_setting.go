@@ -1,6 +1,6 @@
 package operation_setting
 
-import "github.com/QuantumNous/new-api/setting/config"
+import "github.com/QuantumNous/flowgate/setting/config"
 
 type ChannelAffinityKeySource struct {
 	Type string `json:"type"` // context_int, context_string, gjson

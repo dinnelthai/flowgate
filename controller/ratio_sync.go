@@ -16,13 +16,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/QuantumNous/new-api/common"
-	"github.com/QuantumNous/new-api/logger"
+	"github.com/QuantumNous/flowgate/common"
+	"github.com/QuantumNous/flowgate/logger"
 
-	"github.com/QuantumNous/new-api/dto"
-	"github.com/QuantumNous/new-api/model"
-	"github.com/QuantumNous/new-api/setting/billing_setting"
-	"github.com/QuantumNous/new-api/setting/ratio_setting"
+	"github.com/QuantumNous/flowgate/dto"
+	"github.com/QuantumNous/flowgate/model"
+	"github.com/QuantumNous/flowgate/setting/billing_setting"
+	"github.com/QuantumNous/flowgate/setting/ratio_setting"
 	"github.com/samber/lo"
 
 	"github.com/gin-gonic/gin"
